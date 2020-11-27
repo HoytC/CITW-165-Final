@@ -1,0 +1,201 @@
+/*
+Team Project
+CITW 165 - Group 3
+11/26/2020
+
+CSS Template: Rough-ish draft. Feel free to edit CS to make it pretty and gorgeous
+*/
+
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@300;400&display=swap');
+
+/* Begin Body CSS -------------------------------- Gyuhuck! */
+
+body {
+    font-family: 'Work Sans', sans-serif;
+    background-color: #FFD5AF;                      /* BODY BACKGROUND COLOR */ 
+}
+
+p {
+    color: #1d3124;                                /* PARAGRAPH FONT COLOR */
+}
+
+.column.left {
+    float: left;
+    padding: 20px 10px 25px 25px;  /* padding goes top, right, bottom, left */
+    width: 60%;
+}
+
+.column.right {
+    float: right;
+    padding: 20px 25px 25px 30px;
+    width: 20%;                   /* 20% seems to be the sweetspot so our media queries stay proper */ 
+}
+
+img {
+    max-width: 90%;
+    
+}
+/* Begin Navbar CSS ------------------------------- Gyuhuck! */ 
+.navbar {
+    font-family: 'Roboto Condensed', sans-serif;
+    height: 50px;
+    width: 100%;
+    background-color: #712e1e;                      /*  NAVBAR BACKGROUND COLOR */
+    position: relative;
+    -webkit-box-shadow: 10px 10px 10px #E59A59;   /* NAVBAR SHADOW - Feel free to disable for testing purposes or edit/ alter */
+    -moz-box-shadow:    5px 5px 5px #E59A59;
+    box-shadow:         3px 3px 3px #E59A59;
+    z-index:999;
+
+  }
+  .navbar > .navbar-header {
+    display: inline;
+  }
+
+  .navbar > .navbar-header > .navbar-title {
+    display: inline-block;
+    font-size: 22px;
+    color:  #E59A59;                    /* "navbar title" id is where it says "Team 3" Change this for that color */
+    text-shadow: 2px 2px #333232;
+    padding: 10px 7px 10px 7px;
+  }
+
+  .navbar > .navbar-links {
+    display: inline;
+    float: right;
+    font-size: 18px;
+  }
+
+  .navbar > .navbar-links > a {
+    display: inline-block;
+    padding: 13px 14px 13px 14px;
+    text-decoration: none;
+    color: #E59A59;                                 /* NAVBAR LINK COLOR : )   */
+    text-shadow: 2px 2px #333232; 
+  }
+
+  .navbar > .navbar-links > a:hover { 
+    -webkit-box-shadow: 0px 0px 14px 0px rgba(0,0,0,0.75);
+	-moz-box-shadow: 0px 0px 14px 0px rgba(0,0,0,0.75);
+	box-shadow: 0px 0px 14px 0px rgba(0,0,0,0.75);
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+  }
+
+    .navbar > .navbar-btn,
+    .navbar > #navbar-check {
+     display: none;
+    }
+
+
+    /* all .navbar media queries relate to the navbar that test for pixel count and change from horizontal to sandwich navbar */ 
+@media (max-width:650px) {
+    .navbar > .navbar-btn {
+      display: inline-block;
+      position: absolute;
+      right: 0px;
+      top: 0px;
+    }
+
+    /* this edits the "clickable" region of the hamburger button : )   */
+    .navbar > .navbar-btn > label {
+      display: inline-block;
+      width: 30px;
+      height: 25px;
+      padding: 13px;
+    }
+    .navbar > .navbar-btn > label:hover,.navbar  #navbar-check:checked ~ .navbar-btn > label {
+      background-color: rgba(0, 0, 0, 0.3);
+    }
+
+    /* edit this to mess with the literal shape of the hamburger icon */
+    .navbar > .navbar-btn > label > span {    
+      display: block;
+      width: 25px;
+      height: 8px;
+      border-top: 2px solid #eee;
+    }
+    .navbar > .navbar-links {
+      position: absolute;
+      display: block;
+      width: 80%;
+      background-color:#712e1e;             /* NAVBAR DROP-DOWN BACKGROUND COLOR- SHOULD MATCH NAVBAR BACKGROUND COLOR */
+      height: 80px;
+      transition: all 0.5s ease-in;
+      overflow-y: hidden;
+      top: 50px;
+      left: 0px;
+    }
+    .navbar > .navbar-links > a {
+      display: block;
+      width: 100%;
+    }
+    .navbar > #navbar-check:not(:checked) ~ .navbar-links {
+      height: 0px;
+    }
+    .navbar > #navbar-check:checked ~ .navbar-links {
+      height: calc(100vh - 50px);
+      overflow-y: auto;
+    }
+
+
+    /* these are the body column media queries to resize things in response to different resolutions / devices. Should be about right? */
+    @media screen and (min-width: 768px) {
+        .column.left {
+            width:18%;
+            float:left;
+            margin:0px 1%;
+        }
+        .column.right {
+            width:20%;
+            float:right;
+            margin:0px 1%;
+        }
+        img {
+            width:100%;
+            height:auto;
+            margin-top:6%;
+        }
+    }
+    @media screen and (max-width: 767px) {
+        .column.left {
+            width:30%;
+            float:left;
+            margin:0px 1%;            
+        }
+        .column.right {
+            width:28%;
+            float:right;
+            margin:0px 1%;
+        }
+        img {
+            width:100%;
+            height:auto;
+            margin-top:6%;
+        }
+    }
+    @media screen and (max-width: 480px) {
+        .column.left {
+            width:40%;
+            float:left;
+            margin:0px 1%;
+        }
+        .column.right {
+            width:20%;
+            float:right;
+            margin:0px 1%;
+        }
+        img {
+            width:100%;
+            height:auto;
+            margin-top:6%;
+        }
+    }
+
+    }
+
+
+    /* Christopher Hoyt, November 2020 */
