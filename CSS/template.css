@@ -93,7 +93,9 @@ img {
 
 
     /* all .navbar media queries relate to the navbar that test for pixel count and change from horizontal to sandwich navbar */ 
-@media (max-width:650px) {
+  
+
+  @media (max-width:650px) {
     .navbar > .navbar-btn {
       display: inline-block;
       position: absolute;
@@ -123,7 +125,7 @@ img {
     .navbar > .navbar-links {
       position: absolute;
       display: block;
-      width: 70%;                                     /* Horizontal size of the navbar dropdown list */
+      width: 50%;                                     /* Horizontal size of the navbar dropdown list */
       background-color:#222831;                     /* NAVBAR DROP-DOWN BACKGROUND COLOR- SHOULD MATCH NAVBAR BACKGROUND COLOR */
       height: 80px;
       transition: all 0.5s ease-in;
@@ -134,13 +136,14 @@ img {
     }
     .navbar > .navbar-links > a {
       display: block;
-      width: 90%;
+      width: 80%;      
     }
     .navbar > #navbar-check:not(:checked) ~ .navbar-links {
       height: 0px;
     }
     .navbar > #navbar-check:checked ~ .navbar-links {
-      height: calc(50vh - 35px);                        /* change (##vh - ##px) to alter the size of the dropdown list. From max rez - fixed amount. */
+      /* height: calc(50vh - 35px);    */  
+      height: auto;                  /* change (##vh - ##px) to alter the size of the dropdown list. From max rez - fixed amount. */
       overflow-y: auto;
       }
 
