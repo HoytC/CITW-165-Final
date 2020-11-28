@@ -78,7 +78,7 @@ img {
   }
 
   .navbar > .navbar-links > a:hover { 
-    -webkit-box-shadow: 0px 0px 14px 0px rgba(0,0,0,0.75);
+  -webkit-box-shadow: 0px 0px 14px 0px rgba(0,0,0,0.75);
 	-moz-box-shadow: 0px 0px 14px 0px rgba(0,0,0,0.75);
 	box-shadow: 0px 0px 14px 0px rgba(0,0,0,0.75);
 	-webkit-border-radius: 5px;
@@ -123,25 +123,26 @@ img {
     .navbar > .navbar-links {
       position: absolute;
       display: block;
-      width: 80%;
+      width: 70%;                                     /* Horizontal size of the navbar dropdown list */
       background-color:#222831;                     /* NAVBAR DROP-DOWN BACKGROUND COLOR- SHOULD MATCH NAVBAR BACKGROUND COLOR */
       height: 80px;
       transition: all 0.5s ease-in;
       overflow-y: hidden;
       top: 50px;
       left: 0px;
+      border-radius: 3px;
     }
     .navbar > .navbar-links > a {
       display: block;
-      width: 100%;
+      width: 90%;
     }
     .navbar > #navbar-check:not(:checked) ~ .navbar-links {
       height: 0px;
     }
     .navbar > #navbar-check:checked ~ .navbar-links {
-      height: calc(100vh - 50px);
+      height: calc(50vh - 35px);                        /* change (##vh - ##px) to alter the size of the dropdown list. From max rez - fixed amount. */
       overflow-y: auto;
-    }
+      }
 
 
     /* these are the body column media queries to resize things in response to different resolutions / devices. Should be about right? */
