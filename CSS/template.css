@@ -14,11 +14,11 @@ CSS Template: Rough-ish draft. Feel free to edit CS to make it pretty and gorgeo
 
 body {
     font-family: 'Work Sans', sans-serif;
-    background-color: #FFD5AF;                      /* BODY BACKGROUND COLOR */ 
+    background-color: #393E46;                      /* BODY BACKGROUND COLOR */ 
 }
 
 p {
-    color: #1d3124;                                 /* PARAGRAPH FONT COLOR */
+    color: #d8d4d4;                                 /* PARAGRAPH FONT COLOR */
 }
 
 .column.left {
@@ -43,12 +43,12 @@ img {
     font-family: 'Roboto Condensed', sans-serif;
     height: 50px;
     width: 100%;
-    background-color: #712e1e;                      /*  NAVBAR BACKGROUND COLOR */
+    background-color: #222831;                      /*  NAVBAR BACKGROUND COLOR */
     position: relative;
-    -webkit-box-shadow: 10px 10px 10px #E59A59;     /* NAVBAR SHADOW - Feel free to disable for testing purposes or edit/ alter */
-    -moz-box-shadow:    5px 5px 5px #E59A59;
-    box-shadow:         3px 3px 3px #E59A59;
-    z-index:999;
+    -webkit-box-shadow: 10px 10px 10px #1a1d20;     /* NAVBAR SHADOW - Feel free to disable for testing purposes or edit/ alter */
+    -moz-box-shadow:    5px 5px 5px #1a1d20;
+    box-shadow:         3px 3px 3px #1a1d20;
+    z-index: 999;
     border-radius: 4px;    
   }
   .navbar > .navbar-header {
@@ -117,13 +117,14 @@ img {
       display: block;
       width: 25px;
       height: 8px;
-      border-top: 2px solid #eee;
+      border-top: 2px solid #E59A59;                /* SANDWICH ICON COLOR */
+      border-radius: 2.5px;                           /* sandwich icon flair :  )    Adds some curve to the ends of the sandwich to make it less.... boring */
     }
     .navbar > .navbar-links {
       position: absolute;
       display: block;
       width: 80%;
-      background-color:#712e1e;                     /* NAVBAR DROP-DOWN BACKGROUND COLOR- SHOULD MATCH NAVBAR BACKGROUND COLOR */
+      background-color:#222831;                     /* NAVBAR DROP-DOWN BACKGROUND COLOR- SHOULD MATCH NAVBAR BACKGROUND COLOR */
       height: 80px;
       transition: all 0.5s ease-in;
       overflow-y: hidden;
