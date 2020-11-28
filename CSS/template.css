@@ -48,7 +48,7 @@ img {
     -moz-box-shadow:    5px 5px 5px #E59A59;
     box-shadow:         3px 3px 3px #E59A59;
     z-index:999;
-
+    border-radius: 4px;    
   }
   .navbar > .navbar-header {
     display: inline;
@@ -143,6 +143,8 @@ img {
 
 
     /* these are the body column media queries to resize things in response to different resolutions / devices. Should be about right? */
+
+
     @media screen and (min-width: 768px) {
         .column.left {
             width:18%;
