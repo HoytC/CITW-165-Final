@@ -18,25 +18,26 @@ body {
 }
 
 p {
-    color: #1d3124;                                /* PARAGRAPH FONT COLOR */
+    color: #1d3124;                                 /* PARAGRAPH FONT COLOR */
 }
 
 .column.left {
     float: left;
-    padding: 20px 10px 25px 25px;  /* padding goes top, right, bottom, left */
+    padding: 20px 10px 25px 25px;                     /* padding goes top, right, bottom, left */
     width: 60%;
 }
 
 .column.right {
     float: right;
     padding: 20px 25px 25px 30px;
-    width: 20%;                   /* 20% seems to be the sweetspot so our media queries stay proper */ 
+    width: 20%;                                       /* 20% seems to be the sweetspot so our media queries stay proper */ 
 }
 
 img {
     max-width: 90%;
     
 }
+
 /* Begin Navbar CSS ------------------------------- Gyuhuck! */ 
 .navbar {
     font-family: 'Roboto Condensed', sans-serif;
@@ -44,7 +45,7 @@ img {
     width: 100%;
     background-color: #712e1e;                      /*  NAVBAR BACKGROUND COLOR */
     position: relative;
-    -webkit-box-shadow: 10px 10px 10px #E59A59;   /* NAVBAR SHADOW - Feel free to disable for testing purposes or edit/ alter */
+    -webkit-box-shadow: 10px 10px 10px #E59A59;     /* NAVBAR SHADOW - Feel free to disable for testing purposes or edit/ alter */
     -moz-box-shadow:    5px 5px 5px #E59A59;
     box-shadow:         3px 3px 3px #E59A59;
     z-index:999;
@@ -57,7 +58,7 @@ img {
   .navbar > .navbar-header > .navbar-title {
     display: inline-block;
     font-size: 22px;
-    color:  #E59A59;                    /* "navbar title" id is where it says "Team 3" Change this for that color */
+    color:  #E59A59;                                  /* "navbar title" id is where it says "Team 3" Change this for that color */
     text-shadow: 2px 2px #333232;
     padding: 10px 7px 10px 7px;
   }
@@ -82,7 +83,7 @@ img {
 	box-shadow: 0px 0px 14px 0px rgba(0,0,0,0.75);
 	-webkit-border-radius: 5px;
 	-moz-border-radius: 5px;
-	border-radius: 5px;
+	border-radius: 5px;                                 /* rounded corner of navbar */
   }
 
     .navbar > .navbar-btn,
@@ -122,7 +123,7 @@ img {
       position: absolute;
       display: block;
       width: 80%;
-      background-color:#712e1e;             /* NAVBAR DROP-DOWN BACKGROUND COLOR- SHOULD MATCH NAVBAR BACKGROUND COLOR */
+      background-color:#712e1e;                     /* NAVBAR DROP-DOWN BACKGROUND COLOR- SHOULD MATCH NAVBAR BACKGROUND COLOR */
       height: 80px;
       transition: all 0.5s ease-in;
       overflow-y: hidden;
@@ -143,8 +144,6 @@ img {
 
 
     /* these are the body column media queries to resize things in response to different resolutions / devices. Should be about right? */
-
-
     @media screen and (min-width: 768px) {
         .column.left {
             width:18%;
